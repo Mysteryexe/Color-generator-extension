@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="scrollbar.css" type="text/css" media="all" />
+    <title>Color Generator</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+    </style>
+  </head>
+  <body>
+    <div id="infoFrame" class="closed">
+      <div id="infoContent">
+        <img class="icon" id="infoClose" src="content/close.svg" />
+        <p class="infoTxt">
+          <img class="fillW" id="title" src="content/about.svg" />
+          Color Generator is a js-based web extension made by
+          <a href="https://mysteryexe.cf/" target="_blank" class="underline"
+            ><strong>Amirali</strong></a
+          >
+          to help developers and designers to find their artwork best matching
+          colors easily.
+        </p>
+        <p class="infoTxt">
+          Please rate us
+          <a
+            href="https://addons.mozilla.org/en-US/firefox/addon/color-generator/"
+            target="_blank"
+            class="underline"
+            ><strong>here</strong></a
+          >
+          if our extension helped you in design and tell us your ideas and
+          opinions about this in our discord server!
+        </p>
+        <a
+          class="rate"
+          href="https://addons.mozilla.org/en-US/firefox/addon/color-generator/"
+          target="_blank"
+        >
+          <img src="content/star.svg" />
+          <img src="content/star.svg" />
+          <img src="content/star.svg" />
+          <img src="content/star.svg" />
+          <img src="content/star.svg" />
+        </a>
+        <a
+          class="rate center"
+          href="https://discord.gg/AzsmP4J7xK"
+          target="_blank"
+        >
+          <img style="filter: invert(1)" src="content/discord.svg" />
+        </a>
+      </div>
+    </div>
+    <div id="favFrame" class="closed">
+      <div id="favContent">
+        <img class="icon" id="favClose" src="content/close.svg" />
+        <p class="favTxt">
+          <img
+            class="fillW"
+            style="margin-top: 15px; margin-bottom: 10px"
+            id="title"
+            src="content/favorites.svg"
+          /><img
+            class="icon"
+            style="margin-right: 5px; height: 14px"
+            src="content/favFilled.svg"
+          />Your favorited colors! click on them to see them in the main frame.
+        </p>
+        <div class="favs" id="favs"></div>
+      </div>
+    </div>
+    <textHolder id="holder" class="center">
+      <div class="alert" id="alertNet">
+        <p>
+          You are offline! Interent connection is needed to use online/bigger
+          colorname library.
+        </p>
+      </div>
+      <img class="fillW" id="title" src="content/title.svg" />
+      <div style="margin-top: 10px" class="center">
+        <div class="line">
+          <p style="font-weight: bold; font-size: large" id="colorName">
+            Color name
+          </p>
+          <img class="icon" id="fav" src="content/fav.svg" />
+        </div>
+        <div class="line">
+          <p id="rgb">rgb</p>
+          <img class="copytxt" id="copy-rgb" src="content/copy.svg" />
+        </div>
+        <div class="line">
+          <p id="hex" style="text-transform: uppercase">hex</p>
+          <img class="copytxt" id="copy-hex" src="content/copy.svg" />
+        </div>
+        <div class="line">
+          <a
+            class="underline"
+            id="related"
+            target="_blank"
+            href="https://www.stocksy.com/color/"
+            >Click here to see related images(beta)</a
+          >
+        </div>
+      </div>
+      <div id="button" class="center">
+        <img class="fillW" id="gen" src="content/gen.svg" />
+      </div>
+      <p class="footer" style="text-align: right">
+        <a
+          class="underline"
+          target="_blank"
+          href="https://addons.mozilla.org/en-GB/firefox/addon/color-generator/"
+          ><strong>ver 1.14</strong></a
+        >
+      </p>
+      <img class="icon footer" id="infoOpen" src="content/info.svg" />
+      <img
+        class="icon footer"
+        style="margin-left: 30px"
+        id="favOpen"
+        src="content/star.svg"
+      />
+    </textHolder>
+    <color id="color"> </color>
+    <div style="display: none; position: absolute">
+      <div class="favColor" id="favSample"></div>
+    </div>
+  </body>
+  <script type="text/javascript" src="ntc.js"></script>
+  <script type="text/javascript" src="tinycolor.js"></script>
+  <script type="text/javascript" src="popup.js"></script>
+  <script type="text/javascript" src="info.js"></script>
+  <script type="text/javascript" src="fav.js"></script>
+</html>
